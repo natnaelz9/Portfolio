@@ -1,0 +1,289 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+body{
+  position: relative;
+  right: 0;
+}
+.one
+{ 
+  background-color: black;
+  height: 100vh;
+}
+.sp
+{
+  color: red;
+}
+.logo
+{
+  display: inline-block;
+  margin-left: 10rem;
+}
+.logo a{
+  position: fixed;
+  text-decoration: none;
+  color: white;
+}
+.nav-bar{
+  position: fixed;
+  right: 5rem;
+  display: inline-block;
+  z-index: 6;
+}
+.nav-bar ul li{
+  display: inline-block;
+  list-style: none;
+  margin-left: 2rem;
+  margin-top: 0.8rem;
+}
+.nav-bar ul li a{
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(173, 171, 171);
+  text-transform:uppercase;
+}
+.nav-bar ul li a::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  display: block;
+  margin: auto;
+  background-color: red; 
+  transition: 0.5s;
+}
+.nav-bar ul li a:hover::after
+{
+  width: 100%;
+}
+.subsection{
+  display: none;
+}
+.nav-bar ul li:hover .subsection{
+    display: block;
+    position: absolute;
+    top: 2rem;
+    width: 8rem;
+    text-align: center;
+}
+.subsection ul li{
+  display: block;
+  color: white;
+}
+.subsection ul li::after
+{
+  content: '';
+  width: 0%;
+  height: 2px;
+  display: block;
+  margin: auto;
+  background-color: red; 
+  transition: 0.5s;
+}
+.subsection ul li:hover::after
+{
+  width: 100%;
+}
+.content
+{
+  margin-top: 10rem;
+  padding: 6rem 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+.image{
+  width: 25rem;
+  height: 20rem;
+  border-radius: 1rem;
+}
+.photo{
+ position: relative;
+ bottom: 4rem;
+ right: 2rem;
+}
+.hello
+{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-bottom: 1.5rem;
+  color: red;
+}
+.am{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+.para1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: lightgray; 
+}
+.me{
+  padding: 0.5em 0.5em;
+  border-radius: 0.3em;
+  background-color: red;
+
+}
+.two{
+  height: 110vh;
+  background-color: black;
+}
+.twoo
+{
+  margin-top: 5rem;
+ display:grid;
+ grid-template-columns: auto auto auto;
+  padding: 1rem 5rem;
+  column-gap: 4em;
+  margin-left: 5rem;
+}
+.m-title{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: white;
+}
+.info
+{
+  width: 20rem;
+  height: 30rem;
+  border-radius: 1rem;
+  background-color: rgb(58, 49, 1);
+}
+.info:hover{
+  box-shadow: 0 0 20px 0 white;
+}
+.iconn{
+  margin-top: 0.5rem;
+  margin-left: 3rem;
+  width: 15rem;
+  height: 14rem;
+  border-radius: 15rem;
+}
+.title{
+  margin-top: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+.infoo {
+  margin-top: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.tapp{
+  margin-top: 1rem;
+  margin-left: 7rem;
+  padding: 1em 2em;
+  border-radius: 1em;
+}
+.tapp a{
+  text-decoration: none;
+  text-transform: capitalize;
+  color: violet;
+}
+.tapp:hover{
+  background-color: black;
+  color: white;
+}
+.three{
+  height: 100vh;
+  background-color: black;
+}
+.threee{
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 2rem;
+  padding: 1rem 3rem;
+}
+.dog{
+  width: 25rem;
+  height: 25rem;
+}
+.bio{
+  margin-top: 10rem;
+  color: rgb(165, 164, 164);
+}
+.my{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: aliceblue;
+}
+.footer{
+  width: 100%;
+  height: 25rem;
+  background-color: black;
+}
+.this{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 1rem 5rem;
+}
+.owner{
+  text-align: center;
+}
+.youu{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 1rem 5rem;
+}
+.you{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+.telegram{
+  margin-bottom: 1rem;
+  color: lightblue;
+}
+.phone{
+  margin-bottom: 1rem;
+  color: white;
+}
+.logos ul li{
+  display: inline-block;
+  list-style: none;
+  margin-left: 0.5rem;
+}
+.logos
+{
+  margin-top: 3rem;
+}
+.spp{
+  margin-left: 1rem;
+}
+.spp a{
+   text-decoration: none;
+   color: white;
+}
+.name{
+  margin-bottom: 1rem;
+}
+.yname{
+  width: 15rem;
+  height: 2rem;
+}
+.email{
+  margin-bottom: 1rem;
+}
+.cv
+{
+  margin-top: 5rem;
+  margin-left: 3rem;
+}
+.cvv{
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+}
+.cvv:hover
+{
+  background-color: skyblue;
+}
+.cvv a{
+  text-decoration: none;
+  color: black;
+}
+.cvv a:hover{
+  color: white;
+}

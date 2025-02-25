@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center" style="font-size: 3rem;" >
+   
+    <form name="test" method="post">
+        <h1>fill the following form </h1>
+
+    <label for="fname" >First name: </label> 
+    <input  style="font-size: 3rem;" type="text" name="fname" placeholder="Enter First name" id="fname" onblur="validateFirstName()"><br>
+    
+    <label for="lname">Last name: </label>
+    <input type="text" name="lname" placeholder="Enter Last name" id="lname" onblur="validatelastname()"><br>
+    
+
+    Sex: <input type="radio" name="sex" value="male" checked> Male
+    <input type="radio" name="sex" value="female"> Female <br>
+
+    Email: <input type="email" placeholder="Enter Your Email" name="email"><br>
+
+    Phone Number: <input type="tel" placeholder="+123 456 7890" name="phone number" onblur="validatePhoneNumber()"><br>
+
+    Birth Date: <input type="date" max="2004-12-31"  onblur="validateBirthDate()"><br>
+
+    <label for="Acadamic rank"> Acadamic Rank</label>
+    <select required >
+        <option value="" >Enter your Acadamic Rank</option>
+        <option value="Degree">Degree</option>
+        <option value="Degree">Masters</option>
+        <option value="Degree">Phd</option>
+    </select><br>
+
+    Password:<input type="password" placeholder="Password" id="password" required><br>
+
+    confirm Password: <input type="password" placeholder="Confirm Password" id="confirm_password" required  onblur="validatePassword()"><br>
+
+    Upload photo: <input type="file" id="myFile" name="filename"  accept="image/*"><br>
+  <input type="submit">
+
+    </form>
+</body>
+    <script>
+function validateFirstName() {
+  const firstName = document.getElementById("fname").value;
+  
+  const regex = /^[a-zA-Z]+$/;
+  if (regex.test(firstName)) {
+    return true;
+  } else {
+    const error = document.createElement("div");
+    error.innerHTML = "Invalid First name should contain only letters.";
+    error.style.color = "red";
+    document.getElementById("fname").parentNode.insertBefore(error, document.getElementById("fname"));
+    return false;
+  }
+}
+function validatelastname() {
+  const lastName = document.getElementsByName("lname")[0].value;
+  if (!/^[a-zA-Z]+$/.test(lastName)) {
+    const error = document.createElement("div");
+    error.innerHTML = "Invalid: Last name should contain only letters.";
+    error.style.color = "red";
+    document.getElementsByName("lname")[0].parentNode.insertBefore(error, document.getElementsByName("lname")[0]);
+    return false;
+  }
+  return true;
+}
+function validateEmail() {
+  const email = document.getElementById("email").value;
+  const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (regex.test(email)) {
+    document.getElementById("emailError").innerHTML = "";
+  } else {
+    document.getElementById("emailError").innerHTML = "Invalid email!";
+    
+  }
+}
+function validatePhoneNumber() {
+  const phoneNumber = document.getElementsByName("phone number")[0].value;
+  if (phoneNumber.length !== 13) {
+    const error = document.createElement("div");
+    error.innerHTML = "Invalid: Phone number should contain 13 digits.";
+    error.style.color = "red";
+    document.getElementsByName("phone number")[0].parentNode.insertBefore(error, document.getElementsByName("phone number")[0]);
+    return false;
+  }
+  return true;
+}
+
+function validatePassword() {
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirm_password").value;
+  if (password === confirmPassword) {
+    return "Valid password!";
+  } else {
+    const error = document.createElement("div");
+    error.innerHTML = "Invalid: Passwords do not match.";
+    error.style.color = "red";
+    document.getElementById("confirm_password").parentNode.insertBefore(error, document.getElementById("confirm_password"));
+    return false;
+  }
+}
+
+
+    </script>
+
+</html>
